@@ -1,5 +1,6 @@
 const moment = require("moment");
 const config = require("./config.json");
+const pkg = require("./package.json");
 
 const watcher = require("./watcher.js");
 watcher({
@@ -19,7 +20,8 @@ app.get("/", (req, res) =>
         res.status(200).render("index", {
             query: donations[0].sort((x, y) => y.time - x.time),
             page: config.page,
-            moment: moment
+            moment: moment,
+            pkg: pkg
         })
     )
 );
@@ -30,7 +32,8 @@ app.use((req, res, next) =>
             code: 404,
             message: "Страница не найдена."
         },
-        page: config.page
+        page: config.page,
+        pkg: pkg
     })
 );
 
@@ -41,7 +44,8 @@ app.use((err, req, res, next) => {
             code: 500,
             message: "Внутренняя ошибка сервера."
         },
-        page: config.page
+        page: config.page,
+        pkg: pkg
     });
 });
 
