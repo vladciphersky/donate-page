@@ -9,7 +9,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "@forevolve/bootstrap-dark": "^1.0.0-alpha.981",
         "ejs": "^3.1.3",
         "express": "^4.17.1",
         "moment": "^2.25.3",
