@@ -1,0 +1,19 @@
+{
+    "port": 80,
+    "token": "donationalerts-token",
+    "database": {
+        "host": "***",
+        "port": 3306,
+        "user": "***",
+        "password": "***",
+        "database": "donate-page",
+        "charset": "utf8mb4",
+        "insecureAuth": true
+    },
+    "page": {
+        "title": "***",
+        "name": "Поддержать",
+        "description": "Поддержите меня и получите \"спасибо\" на данном сайте! ❤",
+        "url": "https://www.donationalerts.com/r/***"
+    }
+}

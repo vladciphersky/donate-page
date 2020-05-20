@@ -1,0 +1,29 @@
+<%- include("_header.ejs", { page: page }) %>
+    <div class="text-center mt-4">
+        <h1><%= page.title %></h1>
+        <p style="color: gray;"><%= page.description %></p>
+        <p style="padding-top: 10px;"><a href="<%= page.url %>" target="_blank"><%= page.url %></a></p>
+    </div>
+    <div class="text-center mb-3">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Никнейм</th>
+                    <th scope="col">Сумма</th>
+                    <th scope="col">Время</th>
+                    <th scope="col">Комментарий</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% query.forEach(donate => { %>
+                    <tr>
+                        <th scope="row"><%= donate.username %></th>
+                        <td><%= donate.money %></td>
+                        <td><%= moment(new Date(donate.time)).locale("ru").format("LLL") %></td>
+                        <td><%= donate.comment %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+<%- include("_footer.ejs") %>

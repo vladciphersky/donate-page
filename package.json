@@ -1,0 +1,19 @@
+{
+    "name": "donate-page",
+    "version": "1.0.0",
+    "description": "Донат-страница с интеграцией DonationAlerts",
+    "main": "index.js",
+    "author": {
+        "name": "vladciphersky",
+        "url": "https://sqdsh.top"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@forevolve/bootstrap-dark": "^1.0.0-alpha.981",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "moment": "^2.25.3",
+        "mysql2": "^2.1.0",
+        "socket.io-client": "^2.3.0"
+    }
+}
