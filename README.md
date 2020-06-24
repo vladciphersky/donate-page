@@ -10,7 +10,7 @@
 3. Запустите скрипт через `tmux` `screen` `pm2` и т.д. (`node index.js`)
 
 ## Как зайти на него под доменом, а не по IP:port?
-Специально для вас скидываю конфигурацию nginx-реверс-прокси, поскольку не шарю как это делается на apache
+Специально для вас скидываю конфигурацию nginx-реверс-прокси
 ```
 server {
         listen 80;
@@ -24,3 +24,12 @@ server {
 }
 ```
 P.S. Скобки **не требуются**, так что убирайте их, или будет ошибка.
+<hr>Пример конфигурации на apache от <a href="https://mrlivixx.me/" target="_blank">MrLivixx</a>:
+```
+<VirtualHost *:80>
+    ServerName <ваш домен>
+    ServerAlias www.<ваш домен>
+    ServerAdmin <ваша почта>
+    ProxyPass / http://localhost:<порт указанный в конфигурации>/
+</VirtualHost>
+```
