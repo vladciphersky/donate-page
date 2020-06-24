@@ -25,6 +25,7 @@ server {
 ```
 P.S. Скобки **не требуются**, так что убирайте их, или будет ошибка.
 <hr>Пример конфигурации на apache от <a href="https://mrlivixx.me/" target="_blank">MrLivixx</a>:
+
 ```
 <VirtualHost *:80>
     ServerName <ваш домен>
